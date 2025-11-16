@@ -19,6 +19,7 @@ class Mujica(commands.Cog):
     ) -> typing.List[app_commands.Choice[str]]:
         choices = []
         norm_current = normalize_text(current)
+        print(norm_current)
         for item in self.mujica_list:
             alt = item.get("alt","")
             if norm_current in alt:
